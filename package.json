@@ -5,5 +5,12 @@
   "repository": "git@github.com:garrettn/garrettnay.com.git",
   "author": "Garrett Nay <g@garrettnay.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "scripts": {
+    "start": "hugo serve",
+    "build": "hugo"
+  },
+  "dependencies": {
+    "hugo-bin": "^0.4.0"
+  }
 }

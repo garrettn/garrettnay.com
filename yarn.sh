@@ -2,7 +2,8 @@
 
 echo "Should yarn.lock be regenerated?"
 if [[ $TRAVIS_PULL_REQUEST_BRANCH != *"greenkeeper"* ]]; then
-	# Not a GreenKeeper Pull Request, aborting
+	# Not a Greenkeeper Pull Request, aborting
+  echo "Not a Greenkeeper pull request. Not updating yarn.lock."
 	exit 0
 fi
 
@@ -20,7 +21,7 @@ echo "(Creat/updat)ing lockfile"
 yarn
 
 echo "Commit and push yarn.lock"
-git config --global user.email "$PUSH_EMAIL"
+git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Travis CI"
 git config --global push.default simple
 

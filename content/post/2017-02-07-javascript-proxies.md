@@ -1,7 +1,7 @@
 +++
-date = "2017-01-30T21:47:58-07:00"
+date = "2017-02-07T21:47:58-07:00"
 title = "Use JavaScript Proxies to Debug Changes to Objects"
-description = ""
+description = "How to use a JavaScript proxy to track down where objects are being mutated."
 +++
 
 I recently found a nifty use for JavaScript proxies that helped me understand a complex application better. It's nothing earth-shattering, and I'm certainly not the first person to have this idea, but I thought I'd share it.

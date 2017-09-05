@@ -322,7 +322,7 @@ Now can we get rid of the `state` parameter? Given what we know about how Ramda 
 const pathIsNotNil = path => state => R.compose(isNotNil, R.path)(path)(state)
 ```
 
-If we could do that, then we could take out the `state` parameter entirely. Unfortunately, composing doesn't work that way. According to [the Ramda docs](http://devdocs.io/ramda/index#compose), "The result of compose is not automatically curried." So we can't pass arguments to a composed function one at a time.
+If we could do that, then we could take out the `state` parameter entirely. Unfortunately, composing doesn't work that way. According to [the Ramda docs](http://devdocs.io/ramda/index#compose), "The result of compose is not automatically curried." So it appears we can't pass arguments to a composed function one at a time.
 
 But all is not lost! The `path` function *is* curried, so we can partially apply that specific function with the path argument, resulting in a composed function that takes only one argument to begin with, like so:
 
@@ -337,7 +337,20 @@ With that in place, now we can remove `state`, resulting in our final, beautiful
 const pathIsNotNil = path => R.compose(isNotNil, R.path(path))
 ```
 
-You may be tempted to keep going and try to take the `path` parameter as well, making it 100% point-free. However, because of the limitations of `compose`, I'm not sure it's possible to do. I certainly haven't found a way to do it; if you have, let me know! In any case, the version we have here is pretty good. And now it's ready to be used in our selector:
+You may be wondering if we can keep going and take out the `path` parameter as well, making the function 100% point-free. I initially thought you couldn't, because of the aforementioned limitations of `compose`, but it turns out you can. The output of `compose` may not be *automatically* curried, but that doesn't mean you can't curry it yourself—and it turns out Ramda has a function to do just that.
+
+
+```js
+const pathIsNotNil = R.curry(R.compose(isNotNil, R.path))
+```
+
+With Ramda's [`curry` function](https://devdocs.io/ramda/index#curry), we've now taken the composed function and turned it into a curried function that takes the arguments one at a time. First it takes the path, and then the data object. In other words, it's exactly the function we said we needed at the beginning.
+
+So now we know we can do it this way. The question is whether we *should*. Ultimately the decision is up to you, but my thinking on here is that we might be taking it too far in this case. I love point-free style as much as the next person, as you might be able to tell by now, but it does have its limitations. For one thing, we've now created an extra layer of abstraction in this function to the point where it's not immediately clear what its signature is. Without some good documentation, you probably wouldn't know that this function takes two arguments without really digging into the individual functions inside. Now, as you become more familiar with Ramda, maybe you *will* pick up on that more quickly. I'll have more to say on familiarity versus simplicity at the end of the article.
+
+But here's a thought that might make a good rule of thumb when it comes to point-free style: When you've refactored to the point where you're no longer mentioning the actual data to operate on, it's probably a good idea to stop there. In the `pathIsNotNil` example, there are two arguments, but only one of them is the actual data we're working with. We removed that argument before using `curry`, and that's probably where we should stop. We know that we're ultimately going to pass the state object in there, but by leaving in the path parameter we're keeping it clear what the function needs. I could be wrong here, but I think this rule helps keep me from getting carried away.
+
+Whatever you decide to do, we now have a `pathIsNotNil` function that is ready to be used in our selector:
 
 ```js
 export const isLoggedIn = pathIsNotNil(['user', 'id'])
@@ -396,7 +409,7 @@ Before moving on to using this function with the actual state object, let's cons
 
 The mapping version of `sumCounts` that we created will get the job done. But I'd like to figure out how to do it with a `reduce` instead. If I didn't have Ramda at my disposal in a project and had to use vanilla JavaScript, I'd use `reduce`, as you can see above. Why? Because I like to avoid looping through an array more than once if I can. In the `map` version, we loop through the array once to map each item to its `count` and then once more to sum them up. That's not even counting the work we'll need to do before this to get to the array of items we need.
 
-With `reduce`, we should be able to do both of those steps in one go. Perhaps this is a case of [premature optimization](https://en.wikipedia.org/wiki/Program_optimization#When_to_optimize), especially if it makes the code harder to understand (although I'll have more to say about unfamiliarity at the end of the article). It might even be a wash because of how many functions are being applied, which can reduce performance. But for argument's sake, and for the sake of better understanding some more Ramda concepts, let's work on a `reduce` version.
+With `reduce`, we should be able to do both of those steps in one go. Perhaps this is a case of [premature optimization](https://en.wikipedia.org/wiki/Program_optimization#When_to_optimize), especially if it makes the code harder to understand (although, again, I'll have more to say about unfamiliarity at the end of the article). It might even be a wash because of how many functions are being applied, which can reduce performance. But for argument's sake, and for the sake of better understanding some more Ramda concepts, let's work on a `reduce` version.
 
 I have to admit that I really struggled with this part. But once I was able to frame the problem in generic terms, I was better able to find the functions I needed. You'll see what I mean shortly.
 

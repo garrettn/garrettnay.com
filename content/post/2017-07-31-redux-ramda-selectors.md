@@ -4,6 +4,43 @@ date = "2017-07-31T09:18:32-06:00"
 description = "Ramda makes writing Redux selectors easier and, dare I say, more declarative."
 +++
 
+## TL;DR
+
+This article turned out way longer than I'd planned. If you just want the gist of what we'll do here, we're going to turn these selectors:
+
+```js
+export const getUserName = state => state.user.name
+
+export const isLoggedIn = state => state.user.id != null
+
+export const getTotalItemCount = state =>
+    Object.values(state.items.byId)
+        .reduce((total, item) => total + item.count, 0)
+```
+
+into this:
+
+```js
+import R from 'ramda'
+
+// Helper functions
+const isNotNil = R.complement(R.isNil)
+const pathIsNotNil = path => R.compose(isNotNil, R.path(path))
+const addProp = propName => R.useWith(R.add, [R.identity, R.prop(propName)])
+const sumProps = propName => R.reduce(addProp(propName), 0)
+const sumCounts = sumProps('count')
+
+// Selector functions
+export const getUserName = R.path(['user', 'name'])
+export const isLoggedIn = pathIsNotNil(['user', 'id'])
+export const getTotalItemCount =
+    R.compose(sumCounts, R.values, R.path(['items', 'byId']))
+```
+
+with the magic of Ramda. This article is mainly geared toward developers who are unfamiliar with Ramda, or who perhaps know a little bit about it but haven't found a lot of practical use for it yet. I assume that you've had some experience developing applications with Redux.
+
+## Introduction
+
 I love Redux. Big deal, right? [A lot of people do](https://github.com/reactjs/redux/stargazers). But seriously, Redux provides a great system for managing state in complex JavaScript applications. Not only that, but it was also the first Flux-like library that I really felt I understood.
 
 I also love [Ramda](http://ramdajs.com/). [I'm definitely not the only one there either](https://github.com/ramda/ramda/stargazers), although it's not quite on the same level of popularity as Redux. That's a shame, because the two libraries can work really well together. Although they serve two very different purposes, their ultimate goal is the same, which is to help you write more functional and declarative™ JavaScript applications.

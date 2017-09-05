@@ -450,7 +450,7 @@ const addCount = R.useWith(R.add, [/* transformers */])
 We know that we need to transform the second argument of `add` by getting the `count` prop off it, so we can put that as the second function in the transformers array.
 
 ```js
-const addCount = R.usseWith(R.add [/* 1st */, R.prop('count')])
+const addCount = R.useWith(R.add [/* 1st */, R.prop('count')])
 ```
 
 What about the first argument? It corresponds to the total count. It's already a number, so we don't want to transform it at all. Here's where another seemingly useless function actually becomes useful. It's called [`identity`](https://devdocs.io/ramda/index#identity), and all it does is return the same value that was passed to it. It sounds silly by itself, but in a situation like this it is exactly what we need.

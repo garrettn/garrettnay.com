@@ -37,7 +37,7 @@ export const getTotalItemCount =
     R.compose(sumCounts, R.values, R.path(['items', 'byId']))
 ```
 
-with the magic of Ramda. This article is mainly geared toward developers who are unfamiliar with Ramda, or who perhaps know a little bit about it but haven't found a lot of practical use for it yet. I assume that you've had some experience developing applications with Redux.
+with the magic of Ramda. This article is mainly geared toward developers who are unfamiliar with Ramda, or who perhaps know a little bit about it but haven't found a lot of practical use for it yet. I assume that you've had some experience developing applications with Redux and are familiar with some ES2015 features like [`export`](https://devdocs.io/javascript/statements/export) and[ arrow functions](https://devdocs.io/javascript/functions/arrow_functions).
 
 ## Introduction
 
@@ -88,7 +88,7 @@ Selector functions take the Redux state tree object and return whatever data you
 
     The drawback with this approach is that we need to go through some gymnastics if we ever need to access the data as an array as we do in this example. Since a plain object doesn't have a `reduce` method, we first call [`Object.keys`](https://devdocs.io/javascript/global_objects/object/keys) on the object to get an array of IDs and operate on that instead. It's a little ugly, but it works.
 
-These examples are fairly generic, but they demonstrate the kinds of selectors you might find yourself writing in a Redux application. Let's see them all together, this time exporting them so they can be used in our components.
+These examples are fairly generic, but they demonstrate the kinds of selectors you might find yourself writing in a Redux application. Let's see them all together, this time exporting them so they can be used in our components. (We're using the [ES2015 `export` syntax](https://devdocs.io/javascript/statements/export), which you might need a transpiler like [Babel](https://babeljs.io/) to be able to use.)
 
 ```js
 export function getUserName(state) {
@@ -107,7 +107,7 @@ export function getTotalItemCount(state) {
 }
 ```
 
-If you're in an environment that supports [ES2015 arrow functions](https://devdocs.io/javascript/functions/arrow_functions) (or you're using a transpiler like [Babel](https://babeljs.io/) that makes them available anywhere), you can make these selectors even nicer:
+If we're using `export` syntax, then we can probably also use [ES2015 arrow functions](https://devdocs.io/javascript/functions/arrow_functions) to make these selectors even nicer:
 
 ```js
 export const getUserName = state => state.user.name

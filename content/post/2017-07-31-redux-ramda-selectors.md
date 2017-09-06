@@ -307,7 +307,7 @@ const isNotNil = val => !R.isNil(val)
 Or we could go even further with using Ramda functions. You guessed it! There is a [`not` function](https://devdocs.io/ramda/index#not) that does basically the same thing as `!`:
 
 ```js
-const isNotNil = val = R.not(R.isNil(val))
+const isNotNil = val => R.not(R.isNil(val))
 ```
 
 The second version seems silly, but now we're using nothing but functions, so yay. But we can do better. Now that you've had a taste of point-free style, you'll hopefully start looking for opportunities to refactor to that style. Can we define a function that doesn't reference `val` at all?

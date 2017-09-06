@@ -37,7 +37,7 @@ export const getTotalItemCount =
     R.compose(sumCounts, R.values, R.path(['items', 'byId']))
 ```
 
-with the magic of Ramda. This article is mainly geared toward developers who are unfamiliar with Ramda, or who perhaps know a little bit about it but haven't found a lot of practical use for it yet. I assume that you've had some experience developing applications with Redux and are familiar with some ES2015 features like [`export`](https://devdocs.io/javascript/statements/export) and[ arrow functions](https://devdocs.io/javascript/functions/arrow_functions).
+with the magic of Ramda.<!--more--> This article is mainly geared toward developers who are unfamiliar with Ramda, or who perhaps know a little bit about it but haven't found a lot of practical use for it yet. I assume that you've had some experience developing applications with Redux and are familiar with some ES2015 features like [`export`](https://devdocs.io/javascript/statements/export) and[ arrow functions](https://devdocs.io/javascript/functions/arrow_functions).
 
 ## Introduction
 

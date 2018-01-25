@@ -10,17 +10,9 @@ This is the source code for my website, which is built with [Hugo](http://gohugo
 
 ## Development
 
-### Disclaimer
-
-You can download and use the Hugo binary directly, but in this project I’m using the [hugo-bin](https://github.com/fenneclab/hugo-bin) Node wrapper as a local dependency. Before you start thinking [this is a dumb idea](https://twitter.com/hipsterhacker/status/401817229672468481),
-let me explain my reasons:
-
-- I like to keep my dependencies local as much as possible so that it’s easier to get up and running.
-- Since I’m using other Node modules to process assets like CSS and (eventually) JS, I'm using npm scripts to build anyway.
-- It makes it easier to handle dependencies in a CI environment.
-
 ### Requirements
 
+- [Hugo binary installed](https://gohugo.io/getting-started/installing) and available in your `PATH` (I try to keep up with the latest version, but older versions might work)
 - [Node.js](https://nodejs.org) (I highly recommend a version manager like [n](https://github.com/tj/n) or [nvm](https://github.com/creationix/nvm))
 - [Yarn](https://yarnpkg.com/) (recommended) or npm (comes with Node)
 

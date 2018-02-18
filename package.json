@@ -7,16 +7,9 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "run-p \"styles -- --watch\" serve",
-    "test": "run-s styles && hugo",
-    "serve": "hugo serve",
-    "styles": "postcss _static-src/css/*.css -d static/css"
+    "start": "hugo serve",
+    "test": "hugo"
   },
   "dependencies": {},
-  "devDependencies": {
-    "npm-run-all": "^4.0.2",
-    "postcss-cli": "^6.0.0",
-    "postcss-cssnext": "^3.0.2",
-    "postcss-typography": "beta"
-  }
+  "devDependencies": {}
 }

@@ -2,6 +2,8 @@ baseurl = "https://www.garrettnay.com/"
 languageCode = "en-us"
 title = "Garrett Nay"
 
+pluralizeListTitles = false
+
 [permalinks]
 blog = "/:section/:slug/"
 

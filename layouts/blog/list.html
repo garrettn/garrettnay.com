@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+<h1>Recent blog posts</h1>
+
+<ol>
+  {{ range .Data.Pages }}
+  <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+  {{ end }}
+</ol>
+
+{{ end }}

@@ -71,7 +71,7 @@ repository changes what commit it's on, either from your own work or from pullin
 in updates, the outer repository of my project will notice and consider it a
 modified file. More on that in a bit.
 
-First, I will commit my changes and push them to [my backup repository]({{< relref "post/2013-10-03-octopress-deploy-to-github.md">}}).
+First, I will commit my changes and push them to [my backup repository]({{< relref "blog/002-octopress-deploy-to-github/index.md">}}).
 
 ```
 $ git commit -m "Add Tapir plugin"

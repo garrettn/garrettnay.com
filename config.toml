@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "Garrett Nay"
 
 [permalinks]
-post = "/:section/:title/"
+post = "/:section/:slug/"
 
 [params]
 description = "Looks like Garrett finally got himself a website."

@@ -41,7 +41,7 @@ I won't go into a lot of detail about what proxies are or how they work (consult
 
 In our case, we just log that information, both what the property currently is set to (`target[propKey]`) and what is being changed to (`value`). Why use `console.error`? Because it provides stack traces, allowing you to look up exactly where in your code the property is being set.
 
-{{< figure src="/images/post/proxies/stacktrace.png" title="The stack trace shows you what function caused the mutation." alt="Screenshot of a console.error stack trace in a browser console.">}}
+{{< figure src="stacktrace.png" title="The stack trace shows you what function caused the mutation." alt="Screenshot of a console.error stack trace in a browser console.">}}
 
 This example is admittedly trivial, since all the code is one place, but I'll tell you, when there are dozens of files and you don't know what half of them do, this proxy combined with `console.error` will go a long way toward helping you understand things.
 

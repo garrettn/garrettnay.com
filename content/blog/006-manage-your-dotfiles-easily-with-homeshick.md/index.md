@@ -33,7 +33,7 @@ specifically tell them to.
 For example, in Ubuntu's file manager you can hit <kbd>ctrl+h</kbd>, and you'll
 see files like these:
 
-{{< figure src="/images/post/homeshick/hidden-files-nautilus.png" title="Hidden files in Nautilus" alt="Screenshot of Nautilus file manager showing hidden files" >}}
+{{< figure src="hidden-files-nautilus.png" title="Hidden files in Nautilus" alt="Screenshot of Nautilus file manager showing hidden files" >}}
 
 On the command line, you can use the <kbd>-a</kbd> flag with the <kbd>ls</kbd>
 command to show hidden files in the current working directory:

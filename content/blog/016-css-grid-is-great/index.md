@@ -18,7 +18,7 @@ Here's a challenge for you. Let's say you're building a product page, and up at 
 
 On small screens, the three sections should appear in a simple column, with name at the top, followed by image, and then description. But on larger screens, the image should appear to the side and take the full height of the container, while the name and desription share the height of the container to the left of it. The mockup below illustrates what we're after:
 
-{{< figure src="/images/post/css-grid/grid-example.png" title="The left version is what we want on small screens, the right on larger screens." alt="Mockup of a simple responsive grid design.">}}
+{{< figure src="grid-example.png" title="The left version is what we want on small screens, the right on larger screens." alt="Mockup of a simple responsive grid design.">}}
 
 The exact sizes of each section are not super important—basically we want to make them fluid—but there are three rules to the challenge:
 

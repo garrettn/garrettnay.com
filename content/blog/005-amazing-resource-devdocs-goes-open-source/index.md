@@ -16,7 +16,7 @@ out. Here are a few reasons why.
 
 ## Lots of Documentation All in One Place
 
-{{< figure src="/images/post/devdocs/devdocs.png" title="The DevDocs interface" alt="Screenshot of the DevDocs interface" >}}
+{{< figure src="devdocs.png" title="The DevDocs interface" alt="Screenshot of the DevDocs interface" >}}
 
 DevDocs is a one-stop shop for (nearly) all of your documentation needs. It
 includes docs for core web technologies as well as various popular libraries and
@@ -57,7 +57,7 @@ results with things you don't need, worry no more. DevDocs allows you to select
 only the docs that you want to use and ignore all the others. You can tailor it
 to your specific work!
 
-{{< figure src="/images/post/devdocs/select-docs.png" title="Select only the documentation you want" alt="Screenshot of the list of documentations you can download in DevDocs" >}}
+{{< figure src="select-docs.png" title="Select only the documentation you want" alt="Screenshot of the list of documentations you can download in DevDocs" >}}
 
 ## Lightning-Fast Fuzzy Searching
 
@@ -73,7 +73,7 @@ will understand what you mean. Say, for example, I want to look up CSS
 transforms. I can just type in `tfm`, and "transform" will show up as the first
 entry. Select that one, and I'm there. The whole thing took two seconds.
 
-{{< figure src="/images/post/devdocs/search.png" title="Namespacing your searches is easy" alt="Screenshot of the DevDocs search functionality in action" >}}
+{{< figure src="search.png" title="Namespacing your searches is easy" alt="Screenshot of the DevDocs search functionality in action" >}}
 
 It's also possible to namespace your searches. As I said before, DevDocs has
   lots of different sets of documentation. If you want to, say, look up information

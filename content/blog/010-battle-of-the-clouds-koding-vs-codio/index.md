@@ -4,7 +4,7 @@ date = "2014-07-07T21:05:00-06:00"
 description = "A comparison of two cloud IDEs, Koding and Codio, and why I prefer Codio"
 +++
 
-{{% figure src="/images/post/cloud-ides/puffyclouds3.jpg" title="Image from FreeNaturePictures.com" link="http://www.freenaturepictures.com/cloud-pictures.php" alt="Photo of sunlight shining through clouds" %}}
+{{% figure src="puffyclouds3.jpg" title="Image from FreeNaturePictures.com" link="http://www.freenaturepictures.com/cloud-pictures.php" alt="Photo of sunlight shining through clouds" %}}
 
 Today I'd like to talk about two different cloud <abbr title="Integrated Development Environments">IDEs</abbr> that I've had the chance to use, [Koding](https://koding.com) and [Codio](https://codio.com), and the pros and cons of each. I know that cloud IDEs aren't really new at this point, and these two that I'm talking about certainly aren't the only ones out there, but I've only recently gotten into this game. Hopefully my perspective will help you if you're trying to decide on a cloud IDE to go with.
 
@@ -36,13 +36,13 @@ When you start out with Koding, you get your own virtual machine to develop on. 
 
 These machines are already set up with the resources you need to do most web projects, including Apache, PHP, MySQL, Ruby, Node.js, Perl, and Python. You're certainly not limited to that list, however, since you can install anything you want on the VM. Also, out of the box you're set up with your own subdomain that follows the pattern `[username].kd.io`, and you're free to set up any number of subdomains of that subdomain that point to wherever you want on your machine.
 
-{{< figure src="/images/post/cloud-ides/koding-hello-world.png" title="Your Koding VM is already set up with the most popular web server software." alt="Screenshot of Koding's default server page" >}}
+{{< figure src="koding-hello-world.png" title="Your Koding VM is already set up with the most popular web server software." alt="Screenshot of Koding's default server page" >}}
 
 Upon logging in to Koding, you're greeted with a tabbed interface that includes "Activity", "Teamwork", "Terminal", "Ace" (editor), and "Apps." You start out on the activity feed. Koding places a large emphasis on collaboration, especially learning how to code together. The "Teamwork" tab provides an environment for doing so, but I have to admit that I haven't used it, because this aspect of the service doesn't really interest me. From what it looks like, though, you can start up a Teamwork session, using some kind of app template if you want, and then invite others to work on it with you through the activity feed. Then you can work on the project together in real time and send chat messages back and forth. It seems like a cool idea, although something I haven't really had use for yet.
 
 The editor is pretty nice. It appears to be the [Ace Editor](https://ace.c9.io), which, interestingly enough, is an open-source project developed and maintained by Cloud9. It does what you need it to, for the most part, but if you're coming from a more advanced desktop editor like Sublime Text, you might find yourself missing some features.
 
-{{< figure src="/images/post/cloud-ides/koding-ace.png" title="Koding's Ace Editor" alt="Screenshot of Koding's Ace Editor" >}}
+{{< figure src="koding-ace.png" title="Koding's Ace Editor" alt="Screenshot of Koding's Ace Editor" >}}
 
 Overall, Koding is a pretty good development environment, and I'm frankly stunned that they give you access to all these resources for free.
 
@@ -80,13 +80,13 @@ When you log in to Codio, you first see a dashboard where all your projects are 
 
 To create a new project, you click on the "Create Project" button, and you're presented with a number of options for getting started. You can use a template such as [HTML5 Boilerplate](https://html5boilerplate.com), clone a Git or Mercurial repository, import a Zip file, connect to a server via (S)FTP, or use Salesforce (no idea how that works). You can choose to start a blank project under "templates."
 
-{{< figure src="/images/post/cloud-ides/codio-create-project.png" title="You have a lot of options when creating a project in Codio." alt="Screenshot of Codio's create project page" >}}
+{{< figure src="codio-create-project.png" title="You have a lot of options when creating a project in Codio." alt="Screenshot of Codio's create project page" >}}
 
 The actual IDE feels almost like a desktop application, both in responsiveness and in features. The window is divided up into panels, which you can organize and resize however you like, and those panels contain tabs, which contain the actual stuff you work with, like files, terminals, preferences, and so on. Tabs can be moved around from panel to panel.
 
 The Codio editor features a command bar, made popular by Sublime Text, which makes it easy to access any command or menu option through the keyboard.
 
-{{< figure src="/images/post/cloud-ides/codio-ide.png" title="Codio's IDE is fast, full-featured, and flexible." alt="Screenshot of Codio's IDE" >}}
+{{< figure src="codio-ide.png" title="Codio's IDE is fast, full-featured, and flexible." alt="Screenshot of Codio's IDE" >}}
 
 Each project has a configuration file where you can set up how to preview your project through the web. You can set up both static and dynamic preview URLs, and then these options are available through a convenient menu. One cool feature with the preview URLs is that if the server is listening on a non-standard port, you can access it at either `[subdomain].codio.io:[port]` or `[subdomain]-[port].codio.io`. That means if you have a proxy blocking every port besides 80 and 443, you can still access it. When you use the second URL option, Codio will route you to the right place. Pretty cool!
 

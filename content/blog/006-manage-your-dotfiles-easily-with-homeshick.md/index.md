@@ -53,7 +53,7 @@ Books          Downloads  .grabMyBooks     .nvm           .steam         Videos
 ```
 
 That's great, but what do these dotfiles *do*? Well, all sorts of things. I
-showed [in a previous post]({{< relref "post/2013-10-21-run-programs-from-your-home-directory-in-ubuntu.md" >}}) how some files, like `.profile` and `.bashrc`, let
+showed [in a previous post]({{< relref "blog/004-run-programs-from-your-home-directory-in-ubuntu/index.md" >}}) how some files, like `.profile` and `.bashrc`, let
 you set environment variables. But that's just the beginning. You can set Bash
 aliases, define functions, customize the prompt, and more. And those are just
 the files dealing with the shell. Some dotfiles deal with specific programs,

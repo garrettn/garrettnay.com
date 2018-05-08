@@ -2,6 +2,7 @@
 title = "Write Modular JavaScript That Works Anywhere with UMD"
 date = "2014-02-19T06:20:47-07:00"
 description = "How the Universal Module Definition helps you write JavaScript modules that work in multiple environments, including RequireJS and Node."
+categories = [ "Technical" ]
 +++
 
 Have you ever used a JavaScript library that gives you more than one way to include it in your project? Take, for example, the [Backbone localStorage adapter](https://github.com/jeromegn/Backbone.localStorage). The readme gives you two ways to put it into your project: including it through a separate script tag in your HTML, or loading it through [RequireJS](http://requirejs.org/).

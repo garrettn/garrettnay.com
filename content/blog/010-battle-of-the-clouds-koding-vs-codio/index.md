@@ -2,6 +2,7 @@
 title = "Battle of the Clouds: Koding vs. Codio"
 date = "2014-07-07T21:05:00-06:00"
 description = "A comparison of two cloud IDEs, Koding and Codio, and why I prefer Codio"
+categories = [ "Technical" ]
 +++
 
 {{% figure src="puffyclouds3.jpg" title="Image from FreeNaturePictures.com" link="http://www.freenaturepictures.com/cloud-pictures.php" alt="Photo of sunlight shining through clouds" %}}

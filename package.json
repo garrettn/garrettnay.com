@@ -15,7 +15,7 @@
   "dependencies": {},
   "devDependencies": {
     "npm-run-all": "^4.0.2",
-    "postcss-cli": "^5.0.0",
+    "postcss-cli": "^6.0.0",
     "postcss-cssnext": "^3.0.2",
     "postcss-typography": "beta"
   }

@@ -12,20 +12,20 @@ wanting to do it:
 
 <!--more-->
 
-* I've been using open-source software heavily for several years now, and I'm
-starting to feel the urge to jump in and become a more active part of the
-community.
+-   I've been using open-source software heavily for several years now, and I'm
+    starting to feel the urge to jump in and become a more active part of the
+    community.
 
-* I learn things better when I teach them to others, so as I'm learning (and I
-have a lot to learn!) I want to use this blog as a vehicle to explain what I'm
-learning, and thus hopefully solidify my own understanding.
+-   I learn things better when I teach them to others, so as I'm learning (and I
+    have a lot to learn!) I want to use this blog as a vehicle to explain what
+    I'm learning, and thus hopefully solidify my own understanding.
 
-* It works as an "accountability journal," encouraging me to more actively work
-on my projects so I have something to write about.
+-   It works as an "accountability journal," encouraging me to more actively
+    work on my projects so I have something to write about.
 
-* [Octopress][1] is really fun to use.
+-   [Octopress][1] is really fun to use.
 
-* Above all, I hope that, once in a while, **I'll be able to help somebody**.
+-   Above all, I hope that, once in a while, **I'll be able to help somebody**.
 
 That last reason is the most important. As I said before, I'm fairly new to web
 development, and for the past year-and-a-half or so I have been devouring

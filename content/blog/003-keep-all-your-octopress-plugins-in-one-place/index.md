@@ -77,7 +77,7 @@ pulling in updates, the outer repository of my project will notice and consider
 it a modified file. More on that in a bit.
 
 First, I will commit my changes and push them to [my backup
-repository]({{< relref "blog/002-octopress-deploy-to-github/index.md">}}).
+repository]({{< ref "/blog/002-octopress-deploy-to-github/index.md">}}).
 
 ```
 $ git commit -m "Add Tapir plugin"

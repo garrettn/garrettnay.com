@@ -30,11 +30,11 @@ was essentially a layer of customization on top of the popular static site
 generator Jekyll intended to make tech blogging easy. Indeed it did make it easy
 to get started, and I was quite happy with it for a good while. But [as I
 mentioned in a post a couple years
-ago]({{< ref "blog/009-the-obligatory-redesign-post/index.md" >}}), eventually I
-wanted to get away from it. At the time I was mostly concerned about customizing
-the theme. But other problems cropped up as well. Setting up on a fresh system
-was kind of a pain. I ran into issues trying to deploy sometimes. Images in my
-posts would randomly disappear. Stuff like that.
+ago]({{< ref "/blog/009-the-obligatory-redesign-post/index.md" >}}), eventually
+I wanted to get away from it. At the time I was mostly concerned about
+customizing the theme. But other problems cropped up as well. Setting up on a
+fresh system was kind of a pain. I ran into issues trying to deploy sometimes.
+Images in my posts would randomly disappear. Stuff like that.
 
 To be fair, Brandon Mathis himself
 [has said that he's well aware of the problems with Octopress 2](http://octopress.org/2015/01/15/octopress-3.0-is-coming/),
@@ -85,7 +85,7 @@ see my progress.
 
 To really drive the point home, I'm also making the source code of this website
 available [on GitHub](https://github.com/garrettn/garettnay.com). In [one of my
-first posts]({{< ref "blog/002-octopress-deploy-to-github/index.md" >}}) I
+first posts]({{< ref "/blog/002-octopress-deploy-to-github/index.md" >}}) I
 explained that I preferred to keep the source of my site (i.e. the input to the
 static site generator) in a private repository in case I was working on a post I
 wasn't ready to share yet. I've changed my mind. I never actually ran into the

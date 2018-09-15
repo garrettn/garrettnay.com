@@ -57,7 +57,7 @@ Books          Downloads  .grabMyBooks     .nvm           .steam         Videos
 
 That's great, but what do these dotfiles _do_? Well, all sorts of things. I
 showed [in a previous
-post]({{< relref "blog/004-run-programs-from-your-home-directory-in-ubuntu/index.md" >}})
+post]({{< ref "/blog/004-run-programs-from-your-home-directory-in-ubuntu/index.md" >}})
 how some files, like `.profile` and `.bashrc`, let you set environment
 variables. But that's just the beginning. You can set Bash aliases, define
 functions, customize the prompt, and more. And those are just the files dealing

@@ -9,7 +9,8 @@ Since I'm still getting this blog started and learning the ropes with Octopress,
 in my first few posts I'm probably goint to talk about it a lot. So far it's
 been quite a journey.
 
-I'm starting to incorporate some third-party plugins [of which there many](https://github.com/imathis/octopress/wiki/3rd-party-plugins).
+I'm starting to incorporate some third-party plugins
+[of which there many](https://github.com/imathis/octopress/wiki/3rd-party-plugins).
 These plugins add some very useful functionality, and I highly recommend you
 check them out.
 
@@ -24,16 +25,18 @@ using Git submodules.
 
 ## Installing Plugins as Git Submodules
 
-[Submodules are a pretty funky feature of Git](http://git-scm.com/book/en/Git-Tools-Submodules) that allow you to include
-another repository as a sub-project of your main repository, keeping track of
-their relationship to each other while still keeping them independent. Weird,
-right?
+[Submodules are a pretty funky feature of Git](http://git-scm.com/book/en/Git-Tools-Submodules)
+that allow you to include another repository as a sub-project of your main
+repository, keeping track of their relationship to each other while still
+keeping them independent. Weird, right?
 
 Let me illustrate. Let's say I want to replace Octopress's default Google site
-search with the awesome service from [Tapir](http://tapirgo.com). Wouldn't you know it,
-[there's a plugin for that](https://github.com/blimey85/octopress-tapir) (and a mighty fine one if I do say so myself!).
-But instead of just downloading the files and copying them as instructed in the
-readme, I'm going to add this repository as a submodule of my blog repository.
+search with the awesome service from [Tapir](http://tapirgo.com). Wouldn't you
+know it,
+[there's a plugin for that](https://github.com/blimey85/octopress-tapir) (and a
+mighty fine one if I do say so myself!). But instead of just downloading the
+files and copying them as instructed in the readme, I'm going to add this
+repository as a submodule of my blog repository.
 
 Here is how I add it as a submodule:
 
@@ -44,8 +47,8 @@ $ git submodule add https://github.com/blimey85/octopress-tapir .plugin-sources/
 It's essentially the same syntax as `git clone`. I'm cloning it into a directory
 called `.plugin-sources/tapir`, which will be created if it doesn't already
 exist. I'm calling it `.plugin-sources` to differentiate it from the `plugins`
-directory, which contains only Ruby scripts for various plugins. The dot is there
-to keep it hidden and consistent with the `.themes` directory.
+directory, which contains only Ruby scripts for various plugins. The dot is
+there to keep it hidden and consistent with the `.themes` directory.
 
 The output of that command looks pretty much the same as what you'd see with
 `git clone`. But when I enter `git status`, the result is different.
@@ -60,19 +63,21 @@ $ git status
 #	new file:   .plugin-sources/tapir
 #
 ```
+
 There's a new file called `.gitmodules`; this is where Git lists information
 about each submodule that you've installed. Also notice that the
-`.plugin-sources/tapir` directory is there, but it's listed as a file. As far
-as my master repository is concerned, that directory is nothing but a single
-file, and it doesn't care what goes on inside that repository.
+`.plugin-sources/tapir` directory is there, but it's listed as a file. As far as
+my master repository is concerned, that directory is nothing but a single file,
+and it doesn't care what goes on inside that repository.
 
 Until there's new commit in it, that is. You see, the submodule is a special
 type of file that points to a specific commit of the repository. If the
-repository changes what commit it's on, either from your own work or from pulling
-in updates, the outer repository of my project will notice and consider it a
-modified file. More on that in a bit.
+repository changes what commit it's on, either from your own work or from
+pulling in updates, the outer repository of my project will notice and consider
+it a modified file. More on that in a bit.
 
-First, I will commit my changes and push them to [my backup repository]({{< relref "blog/002-octopress-deploy-to-github/index.md">}}).
+First, I will commit my changes and push them to [my backup
+repository]({{< relref "blog/002-octopress-deploy-to-github/index.md">}}).
 
 ```
 $ git commit -m "Add Tapir plugin"
@@ -124,9 +129,9 @@ $ git status
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-This basically means that submodule is pointing to one commit, but the repository
-itself is now pointing to a different (newer) one. To get the submodule lined
-up with the repository, I just to a `submodule update` command.
+This basically means that submodule is pointing to one commit, but the
+repository itself is now pointing to a different (newer) one. To get the
+submodule lined up with the repository, I just to a `submodule update` command.
 
 ```
 $ git submodule update
@@ -142,4 +147,4 @@ project directory. I might try using symbolic links instead, but I would need to
 experiment with that first. This system isn't perfect, but at least it is one
 step above manually downloading individual files from the project repository.
 
-How do *you* like to manage your Octopress plugins?
+How do _you_ like to manage your Octopress plugins?

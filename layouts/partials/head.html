@@ -3,50 +3,50 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 <!-- set variables with fallbacks -->
-{{ .Scratch.Set "title" .Site.Title  }}
+{{ $title := .Site.Title  }}
 {{ if and (.Title) (ne .Title .Site.Title)  }}
-{{ .Scratch.Set "title" (delimit (slice .Title " | " (.Scratch.Get "title")) "")  }}
+  {{ $title = (delimit (slice .Title " | " ($title)) "")  }}
 {{ end  }}
 
-{{ .Scratch.Set "description" .Site.Params.description  }}
+{{ $description := .Site.Params.description  }}
 {{ if .Description  }}
-{{ .Scratch.Set "description" .Description }}
+  {{ $description = .Description }}
 {{ end  }}
 
-{{ .Scratch.Set "coverImage" .Site.Params.coverImage  }}
+{{ $coverImage := .Site.Params.coverImage  }}
 {{ if .Params.coverimage  }}
-{{ .Scratch.Set "coverImage" .Params.coverimage  }}
+  {{ $coverImage = .Params.coverimage  }}
 {{ end  }}
 
-{{ .Scratch.Set "coverImageAlt" .Site.Params.coverImageAlt  }}
-{{ if .Params.coverimagealt  }}
-{{ .Scratch.Set "coverImageAlt" .Params.coverimagealt  }}
+{{ $coverImageAlt := .Site.Params.coverImageAlt  }}
+  {{ if .Params.coverimagealt  }}
+{{ $coverImageAlt = .Params.coverimagealt  }}
 {{ end  }}
 
-<title>{{ .Scratch.Get "title"  }}</title>
+<title>{{ $title }}</title>
 
 <!-- Meta tag help is courtesy of https://autonome.github.io/silobuster/ -->
-{{ with (.Scratch.Get "description")  }}<meta name="description" content="{{ .  }}" />{{ end  }}
+<meta name="description" content="{{ $description }}" />
 
 <!-- Schema.org markup (Google) -->
-<meta itemprop="name" content="{{ .Scratch.Get "title"  }}">
-{{ with (.Scratch.Get "description")  }}<meta itemprop="description" content="{{ .  }}">{{ end  }}
-{{ with (.Scratch.Get "coverImage")  }}<meta itemprop="image" content="{{ . | absURL  }}">{{ end  }}
+<meta itemprop="name" content="{{ $title }}">
+<meta itemprop="description" content="{{ $description }}">
+<meta itemprop="image" content="{{ $coverImage | absURL  }}">
 
 <!-- Twitter Card markup-->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="{{ .Site.Params.twitter  }}">
-<meta name="twitter:title" content="{{ .Scratch.Get "title"  }}">
-{{ with (.Scratch.Get "description")  }}<meta name="twitter:description" content="{{ .  }}">{{ end  }}
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $description }}">
 <meta name="twitter:creator" content="{{ .Site.Params.twitter  }}">
 <!-- Twitter summary card with large image must be at least 280x150px -->
-{{ with (.Scratch.Get "coverImage")  }}<meta name="twitter:image" content="{{ . | absURL  }}">{{ end  }}
-{{ with (.Scratch.Get "coverImageAlt")  }}<meta name="twitter:image:alt" content="{{ .  }}">{{ end  }}
+<meta name="twitter:image" content="{{ $coverImage | absURL  }}">
+<meta name="twitter:image:alt" content="{{ $coverImageAlt  }}">
 
 <!-- Open Graph markup (Facebook, Pinterest) -->
-<meta property="og:title" content="{{ .Scratch.Get "title"  }}" />
+<meta property="og:title" content="{{ $title }}" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="{{ .Permalink  }}" />
-{{ with (.Scratch.Get "coverImage")  }}<meta property="og:image" content="{{ . | absURL  }}" />{{ end  }}
-{{ with (.Scratch.Get "description")  }}<meta property="og:description" content="{{ .  }}" />{{ end  }}
+<meta property="og:image" content="{{ $coverImage | absURL  }}" />
+<meta property="og:description" content="{{ $description }}" />
 <meta property="og:site_name" content="{{ .Site.Title  }}" />

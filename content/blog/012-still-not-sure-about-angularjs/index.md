@@ -2,6 +2,7 @@
 title = "Still Not Sure about AngularJS"
 date = "2014-08-19T08:22:47-06:00"
 description = "My thoughts and concerns about the AngularJS framework"
+categories = [ "Technical" ]
 +++
 
 I had originally planned to title this post "I'm Starting to Get Sold on

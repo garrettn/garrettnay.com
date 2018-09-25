@@ -2,6 +2,7 @@
 title = "Better Redux Selectors with Ramda"
 date = "2017-09-06T09:15:00-06:00"
 description = "Ramda makes writing Redux selectors easier and, dare I say, more declarative."
+categories = [ "Technical" ]
 +++
 
 ## TL;DR

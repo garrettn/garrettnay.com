@@ -2,6 +2,7 @@
 date = "2017-02-07T21:47:58-07:00"
 title = "Use JavaScript Proxies to Debug Changes to Objects"
 description = "How to use a JavaScript proxy to track down where objects are being mutated."
+categories = [ "Technical" ]
 +++
 
 I recently found a nifty use for JavaScript proxies that helped me understand a

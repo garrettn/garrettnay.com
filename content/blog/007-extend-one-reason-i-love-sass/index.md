@@ -3,6 +3,7 @@ title = "@extend: One reason I love Sass"
 date = "2013-12-16T19:19:50-07:00"
 description = "Sass's @extend makes it ridiculously easy to share CSS rules between selectors."
 categories = [ "Technical" ]
+tags = [ "CSS", "preprocessors", "Sass" ]
 +++
 
 As I was working on my last post, I re-discovered a feature of

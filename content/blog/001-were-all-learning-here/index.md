@@ -3,6 +3,7 @@ title = "We're All Learning Here"
 description = "I'm creating this blog so I can help someone with what I've learned about web development."
 date = "2013-10-01T18:22:00-06:00"
 categories = [ "Meta" ]
+tags = [ "blogging", "learning", "Octopress" ]
 +++
 
 Hello, world! Here's another blog about web development. I'm a relative newcomer

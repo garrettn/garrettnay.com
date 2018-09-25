@@ -3,6 +3,7 @@ title = "Octopress: Deploy to GitHub, Back Up to Bitbucket"
 date = "2013-10-03"
 description = "Deploy your Octopress blog publicly to GitHub Pages and back it up privately to Bitbucket."
 categories = [ "Technical" ]
+tags = [ "Bitbucket", "blogging", "deployment", "Git", "GitHub", "Octopress", "static site generators" ]
 +++
 
 It's probably pretty obvious that this blog is built with

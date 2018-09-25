@@ -3,6 +3,7 @@ title = "Manage Your Dotfiles Easily with Git and Homeshick"
 date = "2013-12-10T15:31:03-07:00"
 description = "How to use Homeshick/Homesick to keep track of dotfiles and synchronize them between computers."
 categories = [ "Technical" ]
+tags = [ "dotfiles", "Git", "Homeshick", "Homesick" ]
 +++
 
 It's been a while since my last post, and one reason for that is that I spent

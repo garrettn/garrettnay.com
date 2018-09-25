@@ -1,8 +1,9 @@
 +++
 title = "Keep All Your Octopress Plugins in One Place"
 date = "2013-10-07T15:57:00-06:00"
-description = "Deploy your Octopress blog publicly to GitHub Pages and back it up privately to Bitbucket."
+description = "Git submodules can help you track your Octopress plugins."
 categories = [ "Technical" ]
+tags = [ "Git", "Octopress", "static site generators" ]
 +++
 
 Since I'm still getting this blog started and learning the ropes with Octopress,

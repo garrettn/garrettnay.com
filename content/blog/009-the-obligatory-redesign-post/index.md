@@ -3,6 +3,7 @@ title = "The Obligatory Redesign Post"
 date = "2014-06-10T07:00:48-06:00"
 description = "I've delayed writing my blog because I was looking at upgrading or switching to another platform, but I'll just stick with Octopress 2.0 for now."
 categories = [ "Meta" ]
+tags = [ "blogging", "Octopress", "static site generators" ]
 +++
 
 Hi. Yes, I'm still here. And check out my new design! It may not look like much,

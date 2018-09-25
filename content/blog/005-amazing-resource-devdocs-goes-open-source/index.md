@@ -3,6 +3,7 @@ title = "Amazing Resource DevDocs Goes Open Source"
 date = "2013-10-25T07:39:00-06:00"
 description = "Highlights of the features of DevDocs, an all-in-one documentation tool, and why you should be using it."
 categories = [ "Technical" ]
+tags = [ "documentation", "open source", "web development" ]
 +++
 
 [DevDocs](http://devdocs.io), the all-in-one API documentation tool for web

@@ -3,6 +3,7 @@ title = "Lessons Learned from Creating an Open-Source Library"
 date = "2014-07-12T09:29:19-06:00"
 description = "I recently released a simple jQuery plugin, and I learned a lot of valuable lessons in the process."
 categories = [ "Technical" ]
+tags = [ "JavaScript", "jQuery", "open source" ]
 +++
 
 This past week I released

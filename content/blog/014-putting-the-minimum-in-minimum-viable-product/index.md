@@ -3,6 +3,7 @@ title = "Putting the “Minimum” in “Minimum Viable Product”"
 date = "2016-11-11T00:30:00-07:00"
 description = "Introducing garrettnay.com, my new personal website."
 categories = [ "Meta" ]
+tags = [ "blogging", "Hugo", "static site generators", "open source" ]
 +++
 
 Hello there. Welcome to garrettnay.com.

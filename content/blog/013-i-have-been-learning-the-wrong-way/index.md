@@ -3,6 +3,7 @@ title = "I Have Been Learning the Wrong Way"
 date = "2016-02-02T07:19:10-07:00"
 description = "After taking the Coursera course \"Learning How to Learn,\" I realized I've been using ineffective ways of learning most of my life."
 categories = [ "Life" ]
+tags = [ "learning" ]
 +++
 
 I recently finished an excellent course titled

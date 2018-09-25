@@ -3,6 +3,7 @@ date = "2017-06-19T08:00:00-06:00"
 title = "CSS Grid Is Great"
 description = "CSS Grid allows us to do things that weren’t possible before."
 categories = [ "Technical" ]
+tags = [ "CSS" ]
 +++
 
 Here's a challenge for you. Let's say you're building a product page, and up at

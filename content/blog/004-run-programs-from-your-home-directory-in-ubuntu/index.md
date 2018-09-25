@@ -2,6 +2,7 @@
 title = "Run programs from your home directory in Ubuntu"
 date = "2013-10-21T21:18:00-06:00"
 categories = [ "Technical" ]
+tags = [ "dotfiles", "Linux", "Ubuntu" ]
 +++
 
 <ins>**Update 23 Nov 2013:** Since I upgraded to Ubuntu 13.10, setting variables

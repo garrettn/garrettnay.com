@@ -1,0 +1,14 @@
+<article>
+  <header>
+    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+    <p>
+      Published on
+      <time datetime="{{ .Date }}">{{ .Date.Format "2 Jan 2006" }}</time>
+      in {{ delimit .Params.categories "" }}
+    </p>
+  </header>
+  {{ .Summary }}
+  <footer>
+    <p><a href="{{ .Permalink }}">Read more</a></p>
+  </footer>
+</article>

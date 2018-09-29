@@ -6,8 +6,6 @@ categories = [ "Technical" ]
 tags = [ "web development" ]
 +++
 
-{{% figure src="puffyclouds3.jpg" title="Image from FreeNaturePictures.com" link="http://www.freenaturepictures.com/cloud-pictures.php" alt="Photo of sunlight shining through clouds" %}}
-
 Today I'd like to talk about two different cloud
 <abbr title="Integrated Development Environments">IDEs</abbr> that I've had the
 chance to use, [Koding](https://koding.com) and [Codio](https://codio.com), and

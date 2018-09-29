@@ -1,9 +1,16 @@
 {{ define "main" }}
 
-<h2>Latest blog posts</h2>
+{{ $paginator := .Paginate (where .Pages "Type" "blog") 6 }}
 
-{{ range .Pages }}
+<h2>Latest blog posts{{ if gt $paginator.PageNumber 1 }} (page {{ $paginator.PageNumber }}){{ end }}</h2>
+
+{{ range $paginator.Pages }}
   {{ .Render "summary" }}
 {{ end }}
+
+<nav>
+  {{ if $paginator.HasPrev }}<a href="{{ $paginator.Prev.URL }}">Newer posts</a>{{ end }}
+  {{ if $paginator.HasNext }}<a href="{{ $paginator.Next.URL }}">Older posts</a>{{ end }}
+</nav>
 
 {{ end }}

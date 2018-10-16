@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+<h2>Blog Post Categories</h2>
+
+<ol>
+  {{ $type := .Type }}
+  {{ range $key, $value := .Data.Terms.ByCount }}
+      {{ $name := .Name }}
+      {{ $count := .Count }}
+      {{ with $.Site.GetPage (printf "/%s/%s" $type $name) }}
+      <li><a href="{{ .Permalink }}">{{ $name }} ({{ $count }} posts)</a></li>
+      {{ end }}
+  {{ end }}
+</ol>
+
+{{ end }}

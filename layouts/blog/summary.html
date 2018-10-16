@@ -4,7 +4,10 @@
     <p>
       Published on
       <time datetime="{{ .Date }}">{{ .Date.Format "2 Jan 2006" }}</time>
-      in {{ delimit .Params.categories "" }}
+      in
+      {{ range first 1 .Params.categories  }}
+      <a href="/categories/{{ lower . }}">{{ . }}</a>
+      {{end}}
     </p>
   </header>
   {{ .Summary }}

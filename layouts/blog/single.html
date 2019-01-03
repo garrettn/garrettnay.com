@@ -11,8 +11,19 @@
       <a href="/categories/{{ lower . }}">{{ . }}</a>
       {{end}}
     </p>
-    {{ .Content }}
   </header>
+  {{ .Content }}
+  <footer>
+    <p>Tags:</a>
+    <ul>
+      {{ range .Param "tags" }}
+        {{ $name := . }}
+        {{ with $.Site.GetPage (printf "/tags/%s" ( urlize $name )) }}
+          <li><a href="{{ .Permalink }}">{{ $name }}</a></li>
+        {{ end }}
+      {{ end }}
+    </ul>
+  </footer>
 </article>
 
 {{ end }}

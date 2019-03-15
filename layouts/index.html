@@ -5,6 +5,10 @@
 </header>
 
 <main>
-  <p><a href="/blog">Check out my blog.</a></p>
+  <h2>Recent blog posts</h2>
+  {{ range first 10 ( where .Pages "Type" "blog" ) }}
+    {{ .Render "summary" }}
+  {{ end }}
+  <p><a href="/blog/page/2">Older posts</a></p>
 </main>
 {{ end }}

@@ -8,9 +8,6 @@
   {{ .Render "summary" }}
 {{ end }}
 
-<nav>
-  {{ if $paginator.HasPrev }}<a href="{{ $paginator.Prev.URL }}">Newer posts</a>{{ end }}
-  {{ if $paginator.HasNext }}<a href="{{ $paginator.Next.URL }}">Older posts</a>{{ end }}
-</nav>
+{{ template "_internal/pagination.html" . }}
 
 {{ end }}

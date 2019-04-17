@@ -5,10 +5,31 @@ theme="engimo"
 
 pluralizeListTitles = false
 
+pygmentsCodefences = true
+
 [permalinks]
 blog = "/:section/:slug/"
 
-[params]
-description = "Looks like Garrett finally got himself a website."
-repo = "https://github.com/garrettn/garrettnay.com"
+[params.info]
+description = "Web developer in progress"
+
+[params.settings]
+dateFormat = "2 Jan 2006"
+listDateFormat = "2 Jan 2006"
+
+[params.sidebar]
+enable = "true"
+
+[params.widgets]
+homepage = ["recent_posts"]
+sidebar = ["about"]
+footer = ["social_menu"]
+
+[params.social]
+github = "garrettn"
 twitter = "@grrttn"
+linkedin = "garrettnay"
+
+[params.copyright]
+suffix = "([License information](/license))"
+

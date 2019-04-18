@@ -10,12 +10,20 @@ pygmentsCodefences = true
 [permalinks]
 blog = "/:section/:slug/"
 
+[params.copyright]
+suffix = "([License information](/license))"
+
 [params.info]
 description = "Web developer in progress"
 
 [params.settings]
 dateFormat = "2 Jan 2006"
 listDateFormat = "2 Jan 2006"
+
+[params.social]
+github = "garrettn"
+twitter = "@grrttn"
+linkedin = "garrettnay"
 
 [params.sidebar]
 enable = "true"
@@ -24,12 +32,3 @@ enable = "true"
 homepage = ["recent_posts"]
 sidebar = ["about"]
 footer = ["social_menu"]
-
-[params.social]
-github = "garrettn"
-twitter = "@grrttn"
-linkedin = "garrettnay"
-
-[params.copyright]
-suffix = "([License information](/license))"
-

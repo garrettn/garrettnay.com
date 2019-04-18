@@ -9,6 +9,7 @@ pygmentsCodefences = true
 
 [permalinks]
 blog = "/:section/:slug/"
+page = "/:slug/"
 
 [params.copyright]
 suffix = "([License information](/license))"
@@ -32,3 +33,18 @@ enable = "true"
 homepage = ["recent_posts"]
 sidebar = ["about"]
 footer = ["social_menu"]
+
+[[menu.main]]
+name = "Blog"
+url = "/blog"
+weight = -3
+
+[[menu.main]]
+name = "RSS"
+url = "/index.xml"
+weight = -2
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = -1

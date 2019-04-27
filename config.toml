@@ -11,6 +11,9 @@ pygmentsCodefences = true
 blog = "/:section/:slug/"
 page = "/:slug/"
 
+[params.assets]
+customCSS = ["engimo/custom.css"]
+
 [params.copyright]
 suffix = "([License information](/license))"
 

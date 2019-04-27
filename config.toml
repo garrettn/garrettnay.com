@@ -20,6 +20,7 @@ description = "Web developer in progress"
 [params.settings]
 dateFormat = "2 Jan 2006"
 listDateFormat = "2 Jan 2006"
+hideEntryNavigation = ["page"]
 
 [params.social]
 github = "garrettn"

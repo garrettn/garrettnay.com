@@ -13,6 +13,7 @@ page = "/:slug/"
 
 [params.assets]
 customCSS = ["engimo/custom.css"]
+favicon = "favicon.ico"
 
 [params.copyright]
 suffix = "([License information](/license))"

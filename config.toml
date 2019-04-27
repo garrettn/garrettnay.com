@@ -23,9 +23,10 @@ description = "Web developer in progress"
 
 [params.settings]
 accentColor = "#9bbde8"
-dateFormat = "2 Jan 2006"
+dateFormat = "2 January 2006"
 listDateFormat = "2 Jan 2006"
 hideEntryNavigation = ["page"]
+showReadingTime = true
 
 [params.social]
 github = "garrettn"

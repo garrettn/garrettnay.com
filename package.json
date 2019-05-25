@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "hugo serve",
+    "start": "hugo serve -D",
     "test": "hugo"
   },
   "dependencies": {},

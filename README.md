@@ -1,3 +1,7 @@
+## Deprecation Notice
+
+This repo is no longer the source of my personal website. I've replaced it with a new one. The source of my website as it now stands is not currently available publicly, but it may be in the future. Thanks for visiting!
+
 # garrettnay.com
 
 This is the source code for my website, which is built with
